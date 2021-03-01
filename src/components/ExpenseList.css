@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(226, 231, 228);
+}
+
+thead {
+  display: none;
+}
+
+tr {
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.9);
+  display: block;
+  margin: 0.75rem 0.5rem 1.5rem;
+  padding: 1rem 0.5rem 0.5rem 1 rem;
+}
+
+td {
+  background-color: white;
+  border: 1px solid rgba(88, 194, 95, 0.5);
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+td:before {
+  background: rgba(88, 194, 95, 0.1);
+  color: rgba(88, 194, 95);
+  float: left;
+  font-size: 0.75em;
+  font-weight: 800;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  padding: 0.625rem 0.5rem;
+}
+
+td:nth-child( 1 ) {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+td:nth-child( 1n + 2 ) {
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+
+td:nth-child( 2 ):before {
+  content: 'Categoria: ';
+}
+
+td:nth-child( 3 ):before {
+  content: 'Método: ';
+}
+
+td:nth-child( 4 ):before {
+  content: 'Valor: ';
+}
+
+td:nth-child( 5 ):before {
+  content: 'Moeda: ';
+}
+
+td:nth-child( 6 ):before {
+  content: 'Câmbio: ';
+}
+
+td:nth-child( 7 ):before {
+  content: 'Valor Convertido: ';
+}
+
+td:nth-child( 8 ) {
+  display: none;
+}
+
+td:nth-child( 9 ) {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+td:nth-child( 9 ) button {
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+td:nth-child( 9 ) button:nth-child( 2 ) {
+  background-color: orange;
+  color: black;
+}
