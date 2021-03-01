@@ -20,7 +20,7 @@ class ExpenseInput extends React.Component {
 
     if (type === 'select') {
       return (
-        <label htmlFor={ name }>
+        <label htmlFor={ name } className="options-label">
           { `${label}: ` }
           <select
             name={ name }

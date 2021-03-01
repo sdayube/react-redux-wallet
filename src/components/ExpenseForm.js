@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import ExpenseInput from './ExpenseInput';
 import { fetchCurrencies, addExpense, finishesEdit } from '../actions';
+import './ExpenseForm.css';
 
 class ExpenseForm extends React.Component {
   constructor(props) {
@@ -48,28 +49,36 @@ class ExpenseForm extends React.Component {
     );
 
     return (
-      <section>
+      <section
+        className="expense-form"
+        style={ editing ? { background: 'orange' } : null }
+      >
+        <h2>{editing ? 'Editar despesa' : 'Nova despesa'}</h2>
         <form>
-          <ExpenseInput name="value" label="Valor" />
           <ExpenseInput name="description" label="Descrição" />
-          <ExpenseInput
-            name="currency"
-            type="select"
-            label="Moeda"
-            options={ currencies }
-          />
-          <ExpenseInput
-            name="method"
-            type="select"
-            label="Método de Pagamento"
-            options={ ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'] }
-          />
-          <ExpenseInput
-            name="tag"
-            type="select"
-            label="Categoria"
-            options={ ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'] }
-          />
+          <div className="dual-wrapper">
+            <ExpenseInput
+              name="currency"
+              type="select"
+              label="Moeda"
+              options={ currencies }
+            />
+            <ExpenseInput name="value" label="Valor" />
+          </div>
+          <div className="dual-wrapper">
+            <ExpenseInput
+              name="method"
+              type="select"
+              label="Método de Pagamento"
+              options={ ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'] }
+            />
+            <ExpenseInput
+              name="tag"
+              type="select"
+              label="Categoria"
+              options={ ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'] }
+            />
+          </div>
           {buttonGen(editing)}
         </form>
       </section>
