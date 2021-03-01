@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -51,6 +52,10 @@ class Login extends React.Component {
 
     return (
       <section className="login-box">
+        <img
+          src={ require('../images/wallet.svg') }
+          alt="Trybe Wallet"
+        />
         <form>
           <input
             type="email"
@@ -75,6 +80,7 @@ class Login extends React.Component {
           >
             Entrar
           </button>
+          <button type="button">Cadastrar</button>
         </form>
       </section>
     );

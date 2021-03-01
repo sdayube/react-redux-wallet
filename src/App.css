@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -11,4 +17,44 @@ header {
 .user-wrapper > div {
   display: flex;
   flex-direction: column;
+}
+
+.login-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+  width: 80vw;
+}
+
+.login-box img {
+  width: 70%;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.login-box input {
+  font-size: 1.4rem;
+  margin: 2px 0;
+}
+
+.login-box button {
+  background-color: #4daa88;
+  border-radius: 6px;
+  color: rgb(212, 212, 212);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 12px 0 0;
+  padding: 3px;
+}
+
+.login-box button:nth-of-type( 2 ) {
+  background-color: #2e5c4b;
 }
