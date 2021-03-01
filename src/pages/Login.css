@@ -6,16 +6,17 @@
 
 .login-box {
   align-items: center;
+  background-color: white;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  margin: auto;
-  width: 80vw;
+  padding: 20px;
+  width: 100vw;
 }
 
 .login-box img {
-  width: 70%;
+  width: 200px;
 }
 
 .login-box form {
