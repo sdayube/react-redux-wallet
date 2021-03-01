@@ -13,4 +13,4 @@ Neste projeto, exercitei as seguintes habilidades:
 
 No final das contas consegui produzir um app funcional que utiliza react para construir uma SPA utilizando React Router, e cujo estado é administrado pelo Redux. A interface é mobile-only at o momento (responsividade para desktop está nos planos). Também criei os arquivos .svg no Inkscape com base na marca da Trybe.
 
-_Projeto desenvolvido como avaliação do módulo de front-end no curso da (Trybe)[https://www.betrybe.com/].
+_Projeto desenvolvido como avaliação do módulo de front-end no curso da [Trybe](https://www.betrybe.com/)._
