@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import { storeEmail } from '../actions';
+import './Login.css';
 
 class Login extends React.Component {
   constructor(props) {

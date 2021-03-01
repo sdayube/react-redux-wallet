@@ -1,6 +1,9 @@
+/* eslint-disable global-require */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
+import './WalletHeader.css';
 
 class WalletHeader extends React.Component {
   handleExpenseValue() {
@@ -18,18 +21,18 @@ class WalletHeader extends React.Component {
 
     return (
       <header>
-        <div>myFinance</div>
+        <img
+          src={ require('../images/icon.svg') }
+          alt="Trybe Wallet"
+        />
         <div className="user-wrapper">
-          <img src="" alt="PH" />
           <div>
-            <span data-testid="email-field">{ email }</span>
+            <span data-testid="email-field">{ `Olá, ${email.split('@')[0]}!` }</span>
             <span>
-              Balanço do mês:
-              {' '}
-              <span data-testid="header-currency-field">BRL</span>
+              Você gastou R$
               {' '}
               <span data-testid="total-field">
-                {this.handleExpenseValue()}
+                {this.handleExpenseValue().toFixed(2)}
               </span>
             </span>
           </div>

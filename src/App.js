@@ -1,20 +1,28 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Login from './pages/Login';
 import Wallet from './pages/Wallet';
 
-import './App.css';
-
 function App() {
+  const location = useLocation();
   return (
-    <Switch>
-      <Route exact path="/">
-        <Login />
-      </Route>
-      <Route path="/carteira">
-        <Wallet />
-      </Route>
-    </Switch>
+    <TransitionGroup>
+      <CSSTransition
+        key={ location.key }
+        classNames="fade"
+        timeout={ 300 }
+      >
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/carteira">
+            <Wallet />
+          </Route>
+        </Switch>
+      </CSSTransition>
+    </TransitionGroup>
   );
 }
 
