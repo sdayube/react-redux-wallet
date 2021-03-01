@@ -3,12 +3,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import TableRow from './TableRow';
+import './ExpenseList.css';
 
 class ExpenseList extends React.Component {
   render() {
     const { expenses } = this.props;
     return (
-      <section>
+      <section className="expense-list">
         <table>
           <thead>
             <tr>
